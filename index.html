@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SamkovHomeImproument - Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #34495e;
+    }
+    nav button {
+      background: none;
+      border: none;
+      padding: 14px 20px;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    nav button:hover {
+      background: #2c3e50;
+    }
+    .tab {
+      display: none;
+      padding: 20px;
+    }
+    .tab.active {
+      display: block;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SamkovHomeImproument</h1>
+    <p>Професійні Handyman-послуги: всередині та ззовні</p>
+    <p>Телефон: <a href="tel:+17327994711" style="color:white;">+1 (732) 799-4711</a></p>
+  </header>
+
+  <nav>
+    <button onclick="openTab('home')">Головна</button>
+    <button onclick="openTab('inside')">Inside</button>
+    <button onclick="openTab('outside')">Outside</button>
+    <button onclick="openTab('decor')">Декор</button>
+    <button onclick="openTab('garden')">Garden Work</button>
+    <button onclick="openTab('tile')">Плиточні роботи</button>
+    <button onclick="openTab('walls')">Акцентні стінки</button>
+    <button onclick="openTab('floor')">Підлога</button>
+    <button onclick="openTab('light')">Освітлення</button>
+  </nav>
+
+  <div id="home" class="tab active">
+    <h2>Ласкаво просимо!</h2>
+    <p>Ми надаємо професійні послуги з ремонту та облаштування дому. 
+       Від дрібного ремонту до великих проєктів.</p>
+  </div>
+
+  <div id="inside" class="tab">
+    <h2>Inside</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/400x300" alt="Inside work 1">
+      <img src="https://via.placeholder.com/400x300" alt="Inside work 2">
+    </div>
+  </div>
+
+  <div id="outside" class="tab">
+    <h2>Outside</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/400x300" alt="Outside work 1">
+    </div>
+  </div>
+
+  <div id="decor" class="tab">
+    <h2>Декор</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/400x300" alt="Decor work">
+    </div>
+  </div>
+
+  <div id="garden" class="tab">
+    <h2>Garden Work</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/400x300" alt="Garden work">
+    </div>
+  </div>
+
+  <div id="tile" class="tab">
+    <h2>Плиточні роботи</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/400x300" alt="Tile work">
+    </div>
+  </div>
+
+  <div id="walls" class="tab">
+    <h2>Акцентні стінки</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/400x300" alt="Accent wall">
+    </div>
+  </div>
+
+  <div id="floor" class="tab">
+    <h2>Підлога</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/400x300" alt="Flooring work">
+    </div>
+  </div>
+
+  <div id="light" class="tab">
+    <h2>Освітлення</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/400x300" alt="Lighting work">
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 SamkovHomeImproument. Усі права захищено.</p>
+  </footer>
+
+  <script>
+    function openTab(tabId) {
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
